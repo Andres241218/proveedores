@@ -1,0 +1,81 @@
+// suppliers.component.scss
+$primary-color: #007bff;
+$background-color: #f8f9fa;
+$border-color: #dee2e6;
+
+h2 {
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    background-color: white;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}
+
+// supplier-search.component.scss
+$primary-color: #007bff;
+$input-border-color: #ced4da;
+
+h2 {
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center; // Centra el contenido horizontalmente
+  margin: 10px 0; // Añade un margen vertical
+
+  input {
+    width: 70%; // Ajusta el ancho según sea necesario
+    padding: 10px;
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+    margin-right: 10px; // Espacio entre el input y el botón
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+
+  button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+h3 {
+  text-align: center;
+  color: $primary-color;
+}
+
+p {
+  text-align: center;
+}

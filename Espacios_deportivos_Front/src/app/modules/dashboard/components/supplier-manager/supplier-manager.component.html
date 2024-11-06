@@ -1,0 +1,71 @@
+<main>
+  <div class="left-column">
+    <section class="supplier-search">
+      <h2>Identifique el proveedor para empezar</h2>
+      <div class="search-box">
+        <label for="supplier-input">Nombre o NIT</label>
+        <input
+          type="text"
+          id="supplier-input"
+          [(ngModel)]="supplierInput"
+          (input)="searchSupplier()"
+          placeholder="Input text"
+        />
+      </div>
+    </section>
+
+    <section class="supplier-info" *ngIf="suppliersList.length > 0">
+      <table>
+        <thead>
+          <tr>
+            <th>Proveedor</th>
+            <th>Tipo</th>
+            <th>Direccion</th>
+            <th>Celular</th>
+            <th>Categoría</th>
+            <th>Evaluar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let supplier of suppliersList">
+            <td>{{ supplier.suppliersName }}</td>
+            <td>{{ supplier.suppliersType }}</td>
+            <td>{{ supplier.suppliersAddress }}</td>
+            <td>{{ supplier.suppliersPhone }}</td>
+            <td>{{ supplier.categoryName?.categoryName }}</td>
+            <td>
+              <a (click)="goToSupplierEvaluation(supplier)" class="btn">Evaluar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <div class="right-column" *ngIf="evaluations.length > 0">
+    <section class="evaluations">
+      <h2>Evaluaciones realizadas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Calificación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let evaluation of evaluations">
+            <td>{{ evaluation.id }}</td>
+            <td>{{ evaluation.date }}</td>
+            <td>{{ evaluation.rating }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</main>
+
+<!-- Status message -->
+<div *ngIf="statusMessage" id="status-message">
+  {{ statusMessage }}
+</div>

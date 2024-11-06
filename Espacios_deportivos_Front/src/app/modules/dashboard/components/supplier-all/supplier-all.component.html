@@ -1,0 +1,29 @@
+
+<div>
+    <h2>Lista de Proveedores</h2>
+    <ul>
+      <li *ngFor="let supplier of supplierAll">
+        {{ supplier.suppliersName }} - {{ supplier.suppliersPhone }} - {{ supplier.suppliersAddress }}
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>Buscar Proveedor</h2>
+    <div class="search-container">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Nombre o NIT" />
+      <button (click)="searchSupplier()">Buscar</button>
+    </div>
+  
+    <div *ngIf="supplier">
+      <h3>Proveedor Encontrado:</h3>
+      <p>Nombre: {{ supplier.suppliersName }}</p>
+      <p>NIT: {{ supplier.suppliersNit }}</p>
+      <p>Teléfono: {{ supplier.suppliersPhone }}</p>
+      <p>Dirección: {{ supplier.suppliersAddress }}</p>
+    </div>
+    <div *ngIf="!supplier">
+      <h3>{{message}}</h3>
+    </div>
+  </div>
+  
