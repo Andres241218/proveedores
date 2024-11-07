@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.ngUnsubscribe = new Subject<void>();
     this.loginOrLogoutEvent = new EventEmitter<boolean>();
     this.isLogged = false
-    this.siteName = 'Inicio'
+    this.siteName = 'Proveedores y evaluaciones'
     this.baseUrl = '/supplier-manager'
     this.theme = this.themeManager.theme
   }
