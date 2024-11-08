@@ -3,7 +3,6 @@ body {
     font-weight: bold
   }
   
-
 main {
     padding: 20px;
     display: flex;
@@ -24,11 +23,15 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    font-family: Avenir Next LT Pro;
-    margin-top: 0;
-    color: #000000;
-    font-weight: bold;
+.supplier-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
+    h2 {
+      margin-bottom: 10px;
+    }
 }
 
 .search-box {
