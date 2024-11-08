@@ -1,3 +1,9 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold
+  }
+  
+
 main {
     padding: 20px;
     display: flex;
@@ -19,15 +25,32 @@ main {
 }
 
 h2 {
+    font-family: Avenir Next LT Pro;
     margin-top: 0;
-    color: #333;
+    color: #000000;
+    font-weight: bold;
 }
 
 .search-box {
     margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
-input[type="text"] {
+.search-box label {
+    margin-bottom: 10px;
+    text-align: center; 
+    width: 100%; 
+    font-weight: bold;
+  }
+
+.search-box input[type="text"] {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -39,6 +62,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th, td {
