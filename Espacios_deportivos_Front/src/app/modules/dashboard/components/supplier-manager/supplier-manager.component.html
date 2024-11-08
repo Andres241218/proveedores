@@ -12,6 +12,7 @@
 <main>
     <div class="left-column">
       <section class="supplier-search">
+        <h2 *ngIf="!supplierInput">Identifique el proveedor para empezar</h2>
         <div class="search-box">
           <label for="supplier-input">Nombre o NIT</label>
           <input
